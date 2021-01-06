@@ -617,9 +617,9 @@ async function starts() {
 						samih.splice(from, 1)
 						fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
 						reply('Desativando o modo simi com sucesso neste grupo✔️')
-					} else {
-						reply('1 para ativar, 0 para desativar)
-					}
+		                                } else {
+						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')	
+				}
 					break
 				case 'welcome':
 					if (!isGroup) return reply(mess.only.group)
@@ -634,11 +634,10 @@ async function starts() {
 						welkom.splice(from, 1)
 						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
 						reply('Desativando com sucesso o recurso de boas-vindas neste grupo ✔️')
-					} else {
-						reply('1 para ativar, 0 para desativar')
+                                                } else {
+						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
 					}
-                                      break
-				case 'clone':
+                                      break				case 'clone':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('Tag target yang ingin di clone')
