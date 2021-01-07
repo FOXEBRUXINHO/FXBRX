@@ -637,8 +637,8 @@ async function starts() {
                                                 } else {
 						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
 					}
-                                      break				case 'clone':
-					if (!isGroup) return reply(mess.only.group)
+                                      break
+				case 'clone':					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('Tag target yang ingin di clone')
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag cvk')
